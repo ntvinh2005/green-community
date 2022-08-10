@@ -6,6 +6,7 @@ import { usePurchase } from "../../contexts/PurchaseContext"
 import Item from "./Item"
 import AcceptButton from "./AcceptButton"
 import RejectButton from "./RejectButton"
+import Topbar from '../others/topbar/Topbar'
 
 const Shop = () => {
     const { user } = useAuth()
@@ -36,6 +37,7 @@ const Shop = () => {
 
   return (
     <>
+    <Topbar/>
     <h1>WELCOME TO SHOP</h1>
     
     { open ? 
