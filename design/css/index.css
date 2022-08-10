@@ -39,12 +39,17 @@
   padding: 3rem 8rem 0;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  row-gap: 3rem;
 }
 
 .service-image-container {
   display: flex;
-  justify-content: right;
   align-items: center;
+}
+
+.sic-right {
+  justify-content: right;
 }
 
 .service-image {
@@ -58,6 +63,10 @@
 
 .sd-right {
   grid-column: 2 / span 2;
+}
+
+.sd-left {
+  grid-column: 1 / span 2;
 }
 
 .service-description > h4 {
