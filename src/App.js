@@ -31,6 +31,7 @@ function App() {
               ></Route>
           <Route exact path="/shop" element={<PrivateRoute><Shop></Shop></PrivateRoute>}></Route>
           <Route exact path="/market" element={<PrivateRoute><Market></Market></PrivateRoute>}></Route>
+          <Route exact path="/" element={<Home/>}></Route>
           <Route path="/shop" element = {<Shop />}></Route>
           <Route path="/task" element = {<Task />}></Route>
         </Routes>

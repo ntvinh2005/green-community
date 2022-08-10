@@ -10,12 +10,12 @@ export default function Topbar() {
             </Link>
             <nav class="navbar">
                 <Link to = '/' class = "nav"> Trang chủ </Link>
-                <Link to = '/cuahang' class = "nav"> Cửa hàng </Link>
-                <Link to = '/nhiemvu' class = "nav"> Nhiệm vụ </Link>
+                <Link to = '/shop' class = "nav"> Cửa hàng </Link>
+                <Link to = '/task' class = "nav"> Nhiệm vụ </Link>
             </nav>
             <div class="profile">
                 <p>Xin chào, <b>Người Dùng</b>.</p>
-                <img src="/img/user.png" width="50" height="50" />
+                <img src="/img/user.png" width="50" height="50" alt=""/>
             </div>            
         </div>
     )

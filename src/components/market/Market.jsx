@@ -1,12 +1,14 @@
 import React from 'react'
 import { useMall } from '../../contexts/MallContext'
 import Item from '../shop/Item'
+import Topbar from '../others/topbar/Topbar'
 
 const Market = () => {
     const { shop_items } = useMall()
     
   return (
-    <div>
+    <>
+        <Topbar/>
         <h1>Market</h1>
         {shop_items.map((item) => (
         <div
@@ -16,7 +18,7 @@ const Market = () => {
         <Item item={item}></Item>
       </div>
     ))}
-    </div>
+    </>
   )
 }
 
