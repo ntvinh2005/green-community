@@ -1,3 +1,5 @@
+/* Introduction */
+
 .introduction {
   height: 100vh;
   display: flex;
@@ -19,8 +21,52 @@
   color: white;
 }
 
+/* About us */
+
 .about-us {
-  padding: 5rem;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
+}
+
+.description {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* Service */
+
+.service-grid {
+  padding: 3rem 8rem 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.service-image-container {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.service-image {
+  width: 10rem;
+  height: 10rem;
+}
+
+.service-description {
+  padding-left: 4rem;
+}
+
+.sd-right {
+  grid-column: 2 / span 2;
+}
+
+.service-description > h4 {
+  margin-bottom: 1rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.service-description > p {
+  font-size: 1.25rem;
+  font-weight: 300;
 }
