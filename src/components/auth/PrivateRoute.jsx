@@ -8,4 +8,4 @@ const PrivateRoute = ({ children }) => {
   return <div>{user ? children : <Navigate to="/login" />}</div>;
 };
 
-export default PrivateRoutes;
+export default PrivateRoute;
