@@ -5,6 +5,8 @@ import Signup from './components/auth/SignUp'
 import { AuthProvider } from "./contexts/AuthContext";
 import PrivateRoute from "./components/auth/PrivateRoute";
 import Profile from "./components/auth/Profile"
+import Shop from "./components/shop/Shop";
+import Market from "./components/market/Market"
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
                   </PrivateRoute>
                 }
               ></Route>
+          <Route exact path="/shop" element={<PrivateRoute><Shop></Shop></PrivateRoute>}></Route>
+          <Route exact path="/market" element={<PrivateRoute><Market></Market></PrivateRoute>}></Route>
         </Routes>
         </AuthProvider>
       </BrowserRouter>
