@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react';
-import { useAuth } from '../../contexts/AuthContext';
-import { useNavigate } from 'react-router-dom';
+
+import React, { useRef, useState } from "react";
+import { useAuth } from "../../contexts/AuthContext";
+import { useNavigate, Link}  from "react-router-dom";
 
 const Login = () => {
   const emailRef = useRef();
@@ -12,10 +13,10 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await login(emailRef.current.value, passwordRef.current.value);
-      console.log('Logged in!');
-      setError('');
-      navigate('/studio');
+        await login(emailRef.current.value, passwordRef.current.value)
+        console.log("Logged in!")
+        setError("")
+        navigate("/profile")
     } catch (error) {
       console.log(error);
       setError('Failed to login');
@@ -36,6 +37,12 @@ const Login = () => {
           <input type="password" ref={passwordRef} required></input>
         </div>
         <button type="submit">Login</button>
+        <div>
+            Haven't had an account?{" "}
+            <Link to="/signup">
+              Login
+            </Link>
+          </div>
       </form>
     </div>
   );
