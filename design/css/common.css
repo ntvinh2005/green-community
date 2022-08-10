@@ -5,21 +5,28 @@
 }
 
 :root {
+  --lightgreen: #00ff29;
   --green: #03a71d;
+  --black: #1b1b1b;
 }
 
 html {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  color: #1b1b1b;
+  color: var(--black);
 }
 
 a {
   text-decoration: none;
-  color: #1b1b1b;
+  color: var(--black);
 }
 
 b {
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2rem;
   font-weight: 700;
 }
 
