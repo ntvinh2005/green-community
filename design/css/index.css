@@ -1,0 +1,26 @@
+.introduction {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--lightgreen) url('../img/forest.jpg') no-repeat center;
+  background-blend-mode: multiply;
+}
+
+.introduction > h1 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.introduction > p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.about-us {
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: auto auto;
+}

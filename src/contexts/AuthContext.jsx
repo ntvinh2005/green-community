@@ -1,6 +1,6 @@
-import React from 'react'
-import { useContext, useState, useEffect } from "react";
-import { auth } from "../firebase";
+import React from 'react';
+import { useContext, useState, useEffect } from 'react';
+import { auth } from '../firebase';
 
 const AuthContext = React.createContext();
 
@@ -17,8 +17,9 @@ export function AuthProvider({ children }) {
   }
 
   function login(email, password) {
-    return auth.signInWithEmailAndPassword(email, password)
-    .catch(error => console.log(error.message))
+    return auth
+      .signInWithEmailAndPassword(email, password)
+      .catch((error) => console.log(error.message));
   }
 
   function logout() {
@@ -27,7 +28,7 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     const unsubcribe = auth.onAuthStateChanged((user) => {
-      if (user!==null) setUser(user);
+      if (user !== null) setUser(user);
       setLoading(false);
     });
 
@@ -38,7 +39,7 @@ export function AuthProvider({ children }) {
     user,
     signup,
     login,
-    logout
+    logout,
   };
 
   return (
