@@ -1,8 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-
-import Login from './components/auth/Login'
-import Signup from './components/auth/SignUp'
+import Login from './pages/login/Login'
+import SignUp from './pages/signup/SignUp'
 import { AuthProvider } from "./contexts/AuthContext";
 import PrivateRoute from "./components/auth/PrivateRoute";
 import Profile from "./components/auth/Profile"
@@ -11,7 +10,6 @@ import Market from "./components/market/Market"
 import Home from './pages/home/Home';
 import Task from './pages/task/Task';
 
-
 function App() {
   return (
     <>
@@ -19,7 +17,7 @@ function App() {
         <AuthProvider>
         <Routes>
           <Route path="/" element={<Home/>}></Route>
-          <Route path="/signup" element={<Signup />}></Route>
+          <Route path="/signup" element={<SignUp />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route
                 exact
