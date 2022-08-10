@@ -1,10 +1,10 @@
 import Topbar from '../../components/topbar/Topbar'
 
-export default function Home() {
+export default function Shop() {
     return (
         <>
             <Topbar/>
-            <p>This is the Home page.</p>
+            <p>This is the Shop page.</p>
         </>
     )
 }

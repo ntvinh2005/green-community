@@ -5,11 +5,13 @@ import {Link} from 'react-router-dom';
 export default function Topbar() {
     return (
         <div class = "topbar">
-            <a class="name" > <span class="green">Green</span> Community</a>
+            <Link to = '/' class = "name">
+                <span class="green">Green</span> Community
+            </Link>
             <nav class="navbar">
-                <a class="nav">Trang chủ</a>
-                <a class="nav">Gian hàng</a>
-                <a class="nav">Nhiệm vụ</a>
+                <Link to = '/' class = "nav"> Trang chủ </Link>
+                <Link to = '/cuahang' class = "nav"> Cửa hàng </Link>
+                <Link to = '/nhiemvu' class = "nav"> Nhiệm vụ </Link>
             </nav>
             <div class="profile">
                 <p>Xin chào, <b>Người Dùng</b>.</p>
