@@ -1,35 +1,40 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Login from './pages/login/Login';
-import SignUp from './pages/signup/SignUp';
-import { AuthProvider } from './contexts/AuthContext';
-import PrivateRoute from './components/auth/PrivateRoute';
-import Profile from './components/auth/Profile';
+
+import Login from './components/auth/Login'
+import Signup from './components/auth/SignUp'
+import { AuthProvider } from "./contexts/AuthContext";
+import PrivateRoute from "./components/auth/PrivateRoute";
+import Profile from "./components/auth/Profile"
+import Shop from "./components/shop/Shop";
+import Market from "./components/market/Market"
 import Home from './pages/home/Home';
-import Shop from './pages/shop/Shop';
 import Task from './pages/task/Task';
+
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <AuthProvider>
-          <Routes>
-            <Route path="/" element={<Home/>}></Route>
-            <Route path="/dangky" element={<SignUp />}></Route>
-            <Route path="/dangnhap" element={<Login />}></Route>
-            <Route path="/cuahang" element = {<Shop />}></Route>
-            <Route path="/nhiemvu" element = {<Task />}></Route>
-            <Route
-              exact
-              path="/profile"
-              element={
-                <PrivateRoute>
-                  <Profile />
-                </PrivateRoute>
-              }
-            ></Route>
-          </Routes>
+        <Routes>
+          <Route path="/" element={<Home/>}></Route>
+          <Route path="/signup" element={<Signup />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route
+                exact
+                path="/profile"
+                element={
+                  <PrivateRoute>
+                    <Profile />
+                  </PrivateRoute>
+                }
+              ></Route>
+          <Route exact path="/shop" element={<PrivateRoute><Shop></Shop></PrivateRoute>}></Route>
+          <Route exact path="/market" element={<PrivateRoute><Market></Market></PrivateRoute>}></Route>
+          <Route path="/shop" element = {<Shop />}></Route>
+          <Route path="/task" element = {<Task />}></Route>
+        </Routes>
         </AuthProvider>
       </BrowserRouter>
     </>
