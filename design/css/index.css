@@ -21,4 +21,6 @@
 
 .about-us {
   padding: 5rem;
+  display: grid;
+  grid-template-columns: auto auto;
 }
