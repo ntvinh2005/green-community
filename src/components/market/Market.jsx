@@ -20,4 +20,4 @@ const Market = () => {
   )
 }
 
-export default Market
+export default Market;
