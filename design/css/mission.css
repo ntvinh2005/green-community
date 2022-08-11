@@ -1,0 +1,53 @@
+main {
+  padding: 5rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+h2 {
+  padding-bottom: 5rem;
+  grid-column: 1 / span 2;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.mission-container {
+  display: flex;
+  padding: 2rem 2rem;
+}
+
+.mission-image {
+  width: 10rem;
+  min-height: 10rem;
+  background: center / cover no-repeat;
+}
+
+.mission-description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2rem;
+}
+
+.mission-title {
+  margin: 0 0 0.8rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.mission-description {
+  margin: 0.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.mission-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.2rem;
+}
+
+.mission-text {
+  font-size: 1.25rem;
+}
