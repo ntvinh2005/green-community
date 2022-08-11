@@ -35,6 +35,11 @@ h3 {
   margin-bottom: 2rem;
 }
 
+input,
+button {
+  cursor: pointer;
+}
+
 .green {
   color: var(--green);
 }
