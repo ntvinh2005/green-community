@@ -18,6 +18,7 @@ export const database = {
   shop_item: firestore.collection("shop_item"),
   profile: firestore.collection("profile"),
   purchase: firestore.collection("purchase"),
+  task: firestore.collection("task"),
   formatDoc: (doc) => {
     return {
       id: doc.id,

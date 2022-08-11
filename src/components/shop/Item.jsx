@@ -10,7 +10,7 @@ const Item = ({item}) => {
   return (
     <>
     Item
-    <AddFile item = {item}/>
+    <AddFile item = {item} type = {"item"}/>
     <h5>{item.title}</h5>
     <h5>{item.description}</h5>
     {user.uid === item.author ? (
