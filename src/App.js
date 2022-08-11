@@ -11,14 +11,23 @@ import Home from './pages/home/Home';
 import Task from './pages/task/Task';
 
 function App() {
+  // const { currentUser } = useContext(AuthContext);
+
   return (
     <>
       <BrowserRouter>
         <AuthProvider>
         <Routes>
-          <Route path="/" element={<Home/>}></Route>
-          <Route path="/signup" element={<SignUp />}></Route>
           <Route path="/login" element={<Login />}></Route>
+          {/* <Route path="/signup" element={<SignUp />}></Route> */}
+          <Route path="/" element={<Home />}></Route>
+          {/* <Route path="/" 
+            element={
+              <RequiredAuth>
+                <Home/>
+              </RequiredAuth>
+            }>
+          </Route> */}
           <Route
                 exact
                 path="/profile"

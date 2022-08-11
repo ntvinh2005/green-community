@@ -31,7 +31,7 @@ const Shop = () => {
       }
   
     const hideForm = () => {
-    setOpen(false)
+      setOpen(false)
     }
 
   return (

@@ -4,14 +4,14 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const Profile = () => {
   const [error, setError] = useState('');
-  const { user, logout } = useAuth();
+  const { user, dispatch, logout } = useAuth();
   const navigate = useNavigate();
 
   async function handleLogout() {
     setError('');
     try {
       await logout();
-      navigate('/login');
+      navigate('/');
     } catch {
       setError('Failed to log out');
     }
