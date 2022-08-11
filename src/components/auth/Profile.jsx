@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
+import { useProfile } from '../../contexts/ProfileContext'
 
 const Profile = () => {
   const [error, setError] = useState('');
   const { user, logout } = useAuth();
+  const { profile }  = useProfile()
+
   const navigate = useNavigate();
 
   async function handleLogout() {
@@ -23,6 +26,10 @@ const Profile = () => {
         <h2>Profile</h2>
         {error && <div style={{ color: 'red' }}>{error}</div>}
         <strong>Email:</strong> {user !== null ? user.email : null}
+        <div>
+            <h1>Your Profile</h1>
+            <h5>Email: {profile.email}</h5>
+        </div>
         <div>
           <Link to="/update-profile">Update Profile</Link>
         </div>
