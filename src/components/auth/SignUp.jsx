@@ -9,6 +9,9 @@ const Signup = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const confirmPasswordRef = useRef();
+  const phoneNumberRef = useRef();
+  const placeLivingRef = useRef()
+  const nameRef = useRef()
   const { signup } = useAuth();
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -28,6 +31,9 @@ const Signup = () => {
           database.profile.add({
             uid: user.uid,
             email: user.email,
+            phone: phoneNumberRef.current.value, 
+            place: placeLivingRef.current.value, 
+            username: nameRef.current.value
           });
         }
       });
@@ -55,6 +61,18 @@ const Signup = () => {
           <div id="confirm-password">
             <label>Confirm Password</label>
             <input type="password" ref={confirmPasswordRef} required></input>
+          </div>
+          <div id="phone-number">
+            <label>Phone Number</label>
+            <input type="number" ref={phoneNumberRef} required></input>
+          </div>
+          <div id="place-living">
+            <label>Your Hometown</label>
+            <input type="text" ref={placeLivingRef} required></input>
+          </div>
+          <div id="name">
+            <label>Your Username</label>
+            <input type="text" ref={placeLivingRef} required></input>
           </div>
           <button className="w-100 mt-3" type="submit">
             Sign up

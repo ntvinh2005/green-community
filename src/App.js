@@ -9,7 +9,7 @@ import Profile from "./components/auth/Profile"
 import Shop from "./components/shop/Shop";
 import Market from "./components/market/Market"
 import Home from './pages/home/Home';
-import Task from './pages/task/Task';
+import Task from './components/task/Task';
 
 
 function App() {
