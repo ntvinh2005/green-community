@@ -32,7 +32,11 @@ const Profile = () => {
           <strong>Email:</strong> {user !== null ? user.email : null}
           <div>
               <h1>Your Profile</h1>
+              <h5>Username: {profile.username}</h5>
+              <h3>Point: {profile.point}</h3>
               <h5>Email: {profile.email}</h5>
+              <h5>Phone: {profile.phone}</h5>
+              <h5>Adress: {profile.place}</h5>
           </div>
           <div>
             <Link to="/update-profile">Update Profile</Link>
