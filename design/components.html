@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
   <body>
     <header class="not-login">
@@ -15,9 +16,54 @@
         ><span class="green">Green</span> Community</a
       >
       <nav class="navbar">
-        <a href="#" class="nav authentication-nav">Đăng nhập</a>
-        <a href="#" class="nav authentication-nav">Đăng kí</a>
+        <a href="#" class="authentication-nav">Đăng nhập</a>
+        <a href="#" class="authentication-nav">Đăng kí</a>
       </nav>
     </header>
+    <main>
+      <h3>Biểu mẫu</h3>
+      <form>
+        <label class="form-label" for="input1">Tiêu đề 1:</label>
+        <input
+          type="text"
+          class="form-input"
+          id="input1"
+          placeholder="Ô nhập 1"
+        />
+        <label class="form-label" for="input2">Tiêu đề 2:</label>
+        <input
+          type="password"
+          class="form-input"
+          id="input2"
+          placeholder="Ô nhập 2"
+        />
+        <label class="form-label" for="input1">Tiêu đề hỏng:</label>
+        <input
+          class="form-input"
+          id="input1"
+          placeholder="Ô nhập hỏng"
+          disabled
+        />
+        <button class="submit-button">Xác nhận</button>
+      </form>
+    </main>
+    <footer>
+      <div>
+        <h3><span class="green">Nghĩa vụ</span> của chúng tôi</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          assumenda unde harum nisi, magni porro est. In suscipit ullam nulla id
+          sapiente velit ex, facere atque minus ab delectus iusto.
+        </p>
+      </div>
+      <div>
+        <h3>Thông tin</h3>
+        <nav class="footer-nav">
+          <a href="index.html">Trang chủ</a>
+          <a href="shop.html">Gian hàng</a>
+          <a href="mission.html">Nhiệm vụ</a>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>

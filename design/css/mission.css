@@ -1,5 +1,5 @@
 main {
-  padding: 5rem 2rem;
+  margin: 5rem 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -10,6 +10,16 @@ h2 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
+}
+
+.add-new-mission {
+  grid-column: 1 / span 2;
+}
+
+.add-new-mission > img {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 5px;
 }
 
 .mission-container {
@@ -24,9 +34,6 @@ h2 {
 }
 
 .mission-description-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin-left: 2rem;
 }
 

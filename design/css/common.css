@@ -8,12 +8,18 @@
   --lightgreen: #00ff29;
   --green: #03a71d;
   --black: #1b1b1b;
+  --white: white;
 }
 
 html {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   color: var(--black);
+}
+
+main {
+  padding: 3rem;
+  z-index: -100;
 }
 
 a {
@@ -35,9 +41,21 @@ h3 {
   margin-bottom: 2rem;
 }
 
-input,
 button {
+  width: fit-content;
+  padding: 1rem;
+  border: none;
+  border-radius: 2rem;
   cursor: pointer;
+  background-color: var(--green);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
 
 .green {
@@ -55,4 +73,17 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.form-label {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.form-input {
+  padding: 0.5rem 0.75rem;
+  margin: 1rem 0;
+  border-radius: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 400;
 }

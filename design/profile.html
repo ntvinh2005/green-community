@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thông tin cá nhân</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="name"
+        ><span class="green">Green</span> Community</a
+      >
+      <nav class="navbar">
+        <a href="index.html" class="nav">Trang chủ</a>
+        <a href="shop.html" class="nav">Gian hàng</a>
+        <a href="mission.html" class="nav">Nhiệm vụ</a>
+        <!-- <a href="#" class="nav"></a> -->
+      </nav>
+      <div class="profile">
+        <p>Xin chào, <b>Người Dùng</b>.</p>
+        <img src="img/user.png" width="50" height="50" />
+        <div class="profile-dropdown">
+          <a href="profile.html" class="profile-link">Thông tin cá nhân</a>
+          <a href="#" class="profile-link">Cửa hàng của tôi</a>
+          <a href="#" class="profile-link">Nhiệm vụ đang làm</a>
+          <a href="#" class="profile-link">Đăng xuất</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="profile-short">
+        <div
+          class="profile-image"
+          style="background-image: url(img/user.png)"
+        ></div>
+        <p class="profile-name">Người Dùng</p>
+        <p class="profile-detail">Điểm: <span>10.000</span> điểm</p>
+        <p class="profile-detail">Ngày tham gia: <span>01/01/2022</span></p>
+        <p class="profile-detail">Nhiệm vụ đã làm: <span>100</span></p>
+      </section>
+      <section class="profile-modification">
+        <h3>Thay đổi thông tin cá nhân</h3>
+        <form>
+          <label class="form-label" for="username">Tên tài khoản:</label>
+          <input class="form-input" id="username" value="Người dùng" disabled />
+          <label class="form-label" for="new-username"
+            >Tên tài khoản mới:</label
+          >
+          <input
+            type="text"
+            class="form-input"
+            id="new-username"
+            placeholder="Tên tài khoản mới"
+          />
+          <button class="change-profile-button">Thay đổi tài khoản</button>
+          <label class="form-label" for="email">Địa chỉ thư điện tử:</label>
+          <input
+            class="form-input"
+            id="email"
+            value="user@domain.com"
+            disabled
+          />
+          <label class="form-label" for="new-email"
+            >Địa chỉ thư điện tử mới:</label
+          >
+          <input
+            type="email"
+            class="form-input"
+            id="new-email"
+            placeholder="Địa chỉ thư điện tử mới"
+          />
+          <button class="change-profile-button">
+            Thay đổi địa chỉ thư điện tử
+          </button>
+          <label class="form-label" for="new-email">Mật khẩu mới:</label>
+          <input
+            type="password"
+            class="form-input"
+            id="new-email"
+            placeholder="Mật khẩu mới"
+          />
+          <label class="form-label" for="new-email"
+            >Xác nhận mật khẩu mới:</label
+          >
+          <input
+            type="password"
+            class="form-input"
+            id="new-email"
+            placeholder="Mật khẩu mới"
+          />
+          <button class="change-profile-button" style="margin-bottom: 0">
+            Thay đổi mật khẩu
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <h3><span class="green">Nghĩa vụ</span> của chúng tôi</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          assumenda unde harum nisi, magni porro est. In suscipit ullam nulla id
+          sapiente velit ex, facere atque minus ab delectus iusto.
+        </p>
+      </div>
+      <div>
+        <h3>Thông tin</h3>
+        <nav class="footer-nav">
+          <a href="index.html">Trang chủ</a>
+          <a href="shop.html">Gian hàng</a>
+          <a href="mission.html">Nhiệm vụ</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

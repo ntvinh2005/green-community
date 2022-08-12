@@ -33,19 +33,53 @@ header {
 
 .authentication-nav {
   padding: 1rem;
-  margin: 0 1rem;
-  background-color: var(--green);
+  border: 2px solid var(--green);
   border-radius: 2rem;
-  color: white;
+  margin: 0 1rem;
+  background-color: var(--white);
+  color: var(--green);
+  font-size: 1.25rem;
   font-weight: 600;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.authentication-nav:hover {
+  background-color: var(--green);
+  color: var(--white);
 }
 
 .profile {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   background-color: var(--green);
   color: white;
+}
+
+.profile-dropdown {
+  display: none !important;
+  position: absolute;
+  left: 0;
+  top: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile:hover .profile-dropdown {
+  display: flex !important;
+}
+
+.profile-link {
+  background-color: var(--black);
+  padding: 1rem 2rem;
+  font-weight: 500;
+  color: white;
+  transition: background-color 0.25s;
+}
+
+.profile-link:hover {
+  background-color: var(--green);
 }
 
 .profile > p {
