@@ -4,6 +4,7 @@ import { database } from "../../firebase"
 import { useTask } from "../../contexts/TaskContext"
 import Topbar from '../others/topbar/Topbar'
 import Quest from "./Quest"
+import "./task.css"
 
 const Shop = () => {
     const { user } = useAuth()
@@ -62,25 +63,24 @@ const Shop = () => {
     </div>) : (<button onClick = {openForm}> + </button>)
     }
     <hr></hr>
-    <h1>AVAILABLE QUESTs</h1>
-    {quests.map((quest) => (
-        <div
-        key={quest.id}
-        style={{ maxWidth: "400px" }}
-      >
-        <Quest quest={quest}></Quest>
-      </div>
-    ))}
-    <hr/>
-    <h1>YOUR MISSION</h1>
-    {missions.map((mission) => (
-        <div
-        key={mission.id}
-        style={{ maxWidth: "400px" }}
-      >
-        <Quest quest={mission}></Quest>
-      </div>
-    ))}
+    <main className = "mainTask">
+      <h2>Nhiệm vụ</h2>
+      {quests.map((quest) => (
+          <div key={quest.id} style={{ maxWidth: "400px" }} className = "mission-container">
+            <Quest quest={quest}></Quest>
+          </div>
+      ))}
+      
+      <h1>YOUR MISSION</h1>
+      {missions.map((mission) => (
+          <div
+          key={mission.id}
+          style={{ maxWidth: "400px" }}
+        >
+          <Quest quest={mission}></Quest>
+        </div>
+      ))}
+    </main>
     </>
   )
 }

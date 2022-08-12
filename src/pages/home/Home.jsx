@@ -2,6 +2,8 @@ import Topbar from '../../components/others/topbar/Topbar'
 import Footer from '../../components/others/footer/Footer'
 import "./home.css"
 
+const PF = process.env.PUBLIC_FOLDER
+
 export default function Home() {
 
     return (

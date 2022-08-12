@@ -1,0 +1,88 @@
+header {
+  display: grid;
+  grid-template-columns: 4fr 6fr 3fr;
+}
+
+.not-login {
+  grid-template-columns: 4fr 9fr;
+}
+
+.name {
+  padding: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.navbar {
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.nav {
+  padding: 0 2rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  transition: color 0.25s;
+}
+
+.nav:hover {
+  color: var(--green);
+}
+
+.authentication-nav {
+  padding: 1rem;
+  border: 2px solid var(--green);
+  border-radius: 2rem;
+  margin: 0 1rem;
+  background-color: var(--white);
+  color: var(--green);
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.authentication-nav:hover {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: var(--green);
+  color: white;
+}
+
+.profile-dropdown {
+  display: none !important;
+  position: absolute;
+  left: 0;
+  top: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile:hover .profile-dropdown {
+  display: flex !important;
+}
+
+.profile-link {
+  background-color: var(--black);
+  padding: 1rem 2rem;
+  font-weight: 500;
+  color: white;
+  transition: background-color 0.25s;
+}
+
+.profile-link:hover {
+  background-color: var(--green);
+}
+
+.profile > p {
+  font-size: 1.25rem;
+  padding-right: 0.5rem;
+}

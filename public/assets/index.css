@@ -1,0 +1,85 @@
+main {
+  padding: 0;
+}
+
+/* Introduction */
+
+.introduction {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--lightgreen) url('../img/forest.jpg') no-repeat center;
+  background-blend-mode: multiply;
+}
+
+.introduction > h1 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.introduction > p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* About us */
+
+.about-us {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.description {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+/* Service */
+
+.service-grid {
+  padding: 3rem 8rem 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto auto auto;
+  row-gap: 3rem;
+}
+
+.service-image-container {
+  display: flex;
+  align-items: center;
+}
+
+.sic-right {
+  justify-content: right;
+}
+
+.service-image {
+  width: 10rem;
+  height: 10rem;
+}
+
+.service-description {
+  padding-left: 4rem;
+}
+
+.sd-right {
+  grid-column: 2 / span 2;
+}
+
+.sd-left {
+  grid-column: 1 / span 2;
+}
+
+.service-description > h4 {
+  margin-bottom: 1rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.service-description > p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}

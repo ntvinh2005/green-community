@@ -1,4 +1,7 @@
-import "./topbar.css"
+// import "./topbar.css"
+import "./common.css"
+import "./header.css"
+import "./profile.css"
 
 import {Link, useNavigate} from 'react-router-dom';
 import { useAuth } from "../../../contexts/AuthContext";
@@ -30,20 +33,21 @@ export default function Topbar() {
                 </Link>
                 <nav className="navbar">
                     <Link to = '/' className = "nav"> Trang chủ </Link>
-                    <Link to = '/shop' className = "nav"> Cửa hàng </Link>
+                    <Link to = '/market' className = "nav"> Gian hàng </Link>
                     <Link to = '/task' className = "nav"> Nhiệm vụ </Link>
                 </nav>
                 <div className="profile">
                     <p>Xin chào, {profile.username}!</p>
-                    <ul class="profile-option">
-                        <li class="profile-option-item">
-                            <Link to = '/profile' className = "profile-nav"> Tài khoản của tôi</Link>
-                        </li>
-
-                        <li class="profile-option-item">
-                            <button onClick={handleLogout} className = "profile-nav nav-button">Đăng xuất</button>
-                        </li>
-                    </ul>
+                    <img src = {require('./user.png')} width="50" height="50" />
+                    <div className="profile-dropdown">
+                        <Link to = '/profile' className = "profile-link"> Thông tin cá nhân </Link>
+                        <Link to = '/shop' className = "profile-link"> Cửa hàng của tôi </Link>
+                        <button onClick={handleLogout} className="profile-link">Đăng xuất</button>
+                        {/* <a href="profile.html" class="profile-link">Thông tin cá nhân</a>
+                        <a href="#" class="profile-link">Cửa hàng của tôi</a>
+                        <a href="#" class="profile-link">Nhiệm vụ đang làm</a>
+                        <a href="#" class="profile-link">Đăng xuất</a> */}
+                    </div>
                 </div>            
             </div>
         )
@@ -55,7 +59,7 @@ export default function Topbar() {
                 </Link>
                 <nav className="navbar">
                     <Link to = '/' className = "nav"> Trang chủ </Link>
-                    <Link to = '/shop' className = "nav"> Cửa hàng </Link>
+                    <Link to = '/market' className = "nav"> Gian hàng </Link>
                     <Link to = '/task' className = "nav"> Nhiệm vụ </Link>
                 </nav>
                 <div className = "account"> 
