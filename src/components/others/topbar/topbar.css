@@ -39,27 +39,37 @@ grid-template-columns: 4fr 7fr 2fr;
 }
 
 .name {
-padding: 1.5rem;
-font-size: 2.5rem;
-font-weight: 700;
+  padding: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 .navbar {
-padding: 1.5rem 3rem;
-display: flex;
-justify-content: right;
-align-items: center;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 
 .nav {
-padding: 0 2rem;
-font-size: 1.25rem;
-font-weight: 400;
-transition: color 0.25s;
+  padding: 0 2rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  transition: color 0.25s;
+  /* color: #cccccc; */
 }
 
 .nav:hover {
-color: var(--green);
+  color: var(--green);
+}
+
+.nav-button {
+  border: none;
+  background: none;
+}
+
+button:focus {
+  outline: none,
 }
 
 .authentication-nav {
@@ -72,16 +82,56 @@ font-weight: 600;
 }
 
 .profile {
-display: flex;
-align-items: center;
-justify-content: center;
-background-color: var(--green);
-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--green);
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+.profile:hover .profile-option {
+  display: block;
+  right: 0;
+  top: 100%;
+  box-shadow: 0 0 3px #ccc;
+  padding-left: 0;
 }
 
 .profile > p {
-font-size: 1.25rem;
-padding-right: 0.5rem;
+  font-size: 1.25rem;
+  padding-right: 0.5rem;
+}
+
+.profile-option {
+  margin-top: 0px;
+  position: absolute;
+  right: 0;
+  display: none;
+  transition: 2s;
+}
+
+.profile-nav {
+  color: white;
+  padding: 0 2rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  transition: color 0.25s;
+  justify-content: center;
+}
+
+.profile-nav:hover {
+  color: black;
+}
+
+.profile-option-item {
+  background-color: var(--green);
+  list-style: none;
+  width: 200px;
+  padding: 8px 8px;
+  text-align: right;
+  display: flex;
 }
 
 .account {

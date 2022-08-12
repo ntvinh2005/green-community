@@ -8,7 +8,16 @@ const ProfileReducer = (state, action) => {
           profile: payload.profile
         };
       }
-      default:
+      case "UNSET_PROFILE": {
+        return {
+          ...state,
+          profile: {
+            email: "Unknown",
+            uid: "Unknown"
+          }
+        }
+      }
+        default:
         return state;
     }
 };

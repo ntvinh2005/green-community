@@ -1,11 +1,28 @@
 import "./topbar.css"
 
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import { useAuth } from "../../../contexts/AuthContext";
+import { useState } from "react";
+import { useProfile } from "../../../contexts/ProfileContext";
 
 export default function Topbar() {
-    const { user } = useAuth();
-    if (user) {
+    const { user, logout } = useAuth();
+    const { profile } = useProfile();
+    const [error, setError] = useState('');
+  
+    const navigate = useNavigate();
+  
+    async function handleLogout() {
+      setError('');
+      try {
+        await logout();
+        navigate('/login');
+      } catch {
+        setError('Failed to log out');
+      }
+    }
+
+    if (user) {        
         return (
             <div className = "topbar">
                 <Link to = '/' className = "name">
@@ -17,8 +34,16 @@ export default function Topbar() {
                     <Link to = '/task' className = "nav"> Nhiệm vụ </Link>
                 </nav>
                 <div className="profile">
-                    <p>Xin chào, {user.email}!</p>
-                    {/* <img src="/img/user.png" width="50" height="50" /> */}
+                    <p>Xin chào, {profile.username}!</p>
+                    <ul class="profile-option">
+                        <li class="profile-option-item">
+                            <Link to = '/profile' className = "profile-nav"> Tài khoản của tôi</Link>
+                        </li>
+
+                        <li class="profile-option-item">
+                            <button onClick={handleLogout} className = "profile-nav nav-button">Đăng xuất</button>
+                        </li>
+                    </ul>
                 </div>            
             </div>
         )

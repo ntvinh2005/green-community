@@ -14,14 +14,18 @@ export function useProfile() {
   });
 
   useEffect(() => {
-    return database.profile
-      .where("uid", "==", user.uid)
-      .onSnapshot((snapshot) => {
-        dispatch({
-          type: "SET_PROFILE",
-          payload: { profile: snapshot.docs.map(database.formatDoc)[0] },
+    if (user == null) {
+      dispatch({type: "UNSET_PROFILE"});
+    } else {
+      return database.profile
+        .where("uid", "==", user.uid)
+        .onSnapshot((snapshot) => {
+          dispatch({
+            type: "SET_PROFILE",
+            payload: { profile: snapshot.docs.map(database.formatDoc)[0] },
+          });
         });
-      });
+    } 
   }, [user]);
   console.log(ProfileState);
 
