@@ -1,0 +1,143 @@
+/* Common */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --lightgreen: #00ff29;
+  --green: #03a71d;
+  --black: #1b1b1b;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: var(--black);
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+b {
+  font-weight: 700;
+}
+
+section {
+  padding: 5rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+input,
+button {
+  cursor: pointer;
+}
+
+.green {
+  color: var(--green);
+}
+
+.center-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-align-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Introduction */
+
+.introduction {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--lightgreen) url('/public/img/forest.jpg') no-repeat center;
+    background-blend-mode: multiply;
+  }
+  
+  .introduction > h1 {
+    font-size: 5rem;
+    font-weight: 700;
+  }
+  
+  .introduction > p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+  }
+  
+  /* About us */
+  
+  .about-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .description {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  
+  /* Service */
+  
+  .service-grid {
+    padding: 3rem 8rem 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 3rem;
+  }
+  
+  .service-image-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .sic-right {
+    justify-content: right;
+  }
+  
+  .service-image {
+    width: 10rem;
+    height: 10rem;
+  }
+  
+  .service-description {
+    padding-left: 4rem;
+  }
+  
+  .sd-right {
+    grid-column: 2 / span 2;
+  }
+  
+  .sd-left {
+    grid-column: 1 / span 2;
+  }
+  
+  .service-description > h4 {
+    margin-bottom: 1rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+  }
+  
+  .service-description > p {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+  
