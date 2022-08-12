@@ -4,47 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Thông tin chi tiết</title>
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/description.css" />
   </head>
   <body>
-    <header class="not-login">
+    <header>
       <a href="index.html" class="name"
         ><span class="green">Green</span> Community</a
       >
       <nav class="navbar">
-        <a href="#" class="authentication-nav">Đăng nhập</a>
-        <a href="#" class="authentication-nav">Đăng kí</a>
+        <a href="index.html" class="nav">Trang chủ</a>
+        <a href="shop.html" class="nav">Gian hàng</a>
+        <a href="mission.html" class="nav">Nhiệm vụ</a>
       </nav>
+      <div class="profile">
+        <p>Xin chào, <b>Người Dùng</b>.</p>
+        <img src="img/user.png" width="50" height="50" />
+        <div class="profile-dropdown">
+          <a href="profile.html" class="profile-link">Thông tin cá nhân</a>
+          <a href="#" class="profile-link">Cửa hàng của tôi</a>
+          <a href="#" class="profile-link">Nhiệm vụ đang làm</a>
+          <a href="#" class="profile-link">Đăng xuất</a>
+        </div>
+      </div>
     </header>
     <main>
-      <h3>Biểu mẫu</h3>
-      <form>
-        <label class="form-label" for="input1">Tiêu đề 1:</label>
-        <input
-          type="text"
-          class="form-input"
-          id="input1"
-          placeholder="Ô nhập 1"
-        />
-        <label class="form-label" for="input2">Tiêu đề 2:</label>
-        <input
-          type="password"
-          class="form-input"
-          id="input2"
-          placeholder="Ô nhập 2"
-        />
-        <label class="form-label" for="input1">Tiêu đề hỏng:</label>
-        <input
-          class="form-input"
-          id="input1"
-          placeholder="Ô nhập hỏng"
-          disabled
-        />
-        <button class="submit-button">Xác nhận</button>
-      </form>
+      <div
+        class="description-picture"
+        style="background-image: url('img/cup-of-couple.jpg')"
+      ></div>
+      <div class="description-container">
+        <h4></h4>
+      </div>
     </main>
     <footer>
       <div>
