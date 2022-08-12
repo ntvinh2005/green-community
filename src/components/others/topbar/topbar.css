@@ -34,7 +34,8 @@ grid-template-columns: 4fr 6fr 3fr;
 }
 
 .not-login {
-grid-template-columns: 4fr 9fr;
+display: grid;
+grid-template-columns: 4fr 7fr 2fr;
 }
 
 .name {
@@ -81,4 +82,16 @@ color: white;
 .profile > p {
 font-size: 1.25rem;
 padding-right: 0.5rem;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account_link {
+  font-size: 1.10rem;
+  padding: 5px;
+  color: #250b81
 }
