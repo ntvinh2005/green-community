@@ -6,10 +6,12 @@ import Topbar from '../others/topbar/Topbar'
 import Quest from "./Quest"
 import "./task.css"
 import Footer from "../others/footer/Footer"
+import { useProfile } from '../../contexts/ProfileContext';
 
 const Shop = () => {
     const { user } = useAuth()
     const { quests } = useTask()
+    const { profile } = useProfile();
     console.log(quests)
     var missions = []
 
@@ -27,8 +29,9 @@ const Shop = () => {
         await database.task.add({ 
             title: title,
             description: description,
-            url: "",
+            url: "https://media.istockphoto.com/vectors/black-plus-sign-positive-symbol-vector-id688550958?k=20&m=688550958&s=612x612&w=0&h=wvzUqT3u3feYygOXg3GB9pYBbqIsyu_xpvfTX-6HOd0=",
             author: user.uid, 
+            authorName: profile.username,
             status: "Waiting",
             receivers: [],
          })
@@ -41,15 +44,33 @@ const Shop = () => {
       }
   
     const hideForm = () => {
-    setOpen(false)
+        setOpen(false)
+        
     }
 
   return (
     <>
       <Topbar/>
-      <h1>WELCOME TO QUEST BOARD</h1>
+      <button onClick = {openForm} className = "addButton"> Thêm nhiệm vụ mới </button>
       
-      { open ? 
+      <div id="myModal" className="modal" style={{display: open ? "block" : "none"}}>
+        <div className="new-mission">
+          <span className="close-button"  onClick={hideForm}>&times;</span>
+          <form className = "form-modal">
+            <label className = "form-label">Nhiệm vụ: </label>
+            <textarea className = "form-input" type="text" value={title} onChange={ (event) => setTitle(event.target.value)} required></textarea>
+
+            <label className = "form-label">Mô tả: </label>
+            <textarea className = "form-input form-input-description" value={description} size = "50" onChange={ (event) => setDescription(event.target.value)} required></textarea>
+          </form>
+          <div className="action">
+            <button className = "action-button-post" onClick={handleSubmit}>Đăng</button>
+            <button className = "action-button-cancel" onClick={hideForm}>Huỷ</button>
+          </div>
+        </div>
+      </div>
+
+      {/* { open ? 
       (<div>
           <div>
               <label>Name of quest: </label>
@@ -61,9 +82,7 @@ const Shop = () => {
           </div>
           <button onClick={handleSubmit}>Submit</button>
           <button onClick={hideForm}>Cancel</button>
-      </div>) : (<button onClick = {openForm}> + </button>)
-      }
-      <hr></hr>
+      </div>) : ( */}
       <main className = "mainTask">
         <h2>Nhiệm vụ</h2>
         {quests.map((quest) => (

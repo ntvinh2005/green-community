@@ -54,6 +54,7 @@ form {
   flex-direction: column;
 }
 
+
 .green {
   color: var(--green);
 }
@@ -85,8 +86,13 @@ form {
 }
 
 /* Task */
+.addButton {
+  margin-left: 1.25rem !important;
+  margin-top: 1rem;
+}
+
 .mainTask {
-    margin: 5rem 2rem;
+    margin: 0rem 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -144,7 +150,6 @@ form {
   }
 
   .mission-button {
-    flex: 2;
     display: block
   }
   
@@ -166,4 +171,71 @@ form {
   
 .mission-info {
   display: flex;
+  justify-content: space-between;
+}
+
+
+/* Modal */
+.modal {
+  /* display: none; */
+  position: fixed;
+  z-index: 1;
+  overflow: auto;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.3); 
+}
+
+.new-mission {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 20px;
+  width:  50%;
+  height: 80%;
+  position: relative;
+}
+
+/* New mission */
+.form-modal {
+  height: 88%;
+}
+
+.form-input-description {
+  height: 70%;
+}
+
+.action {
+  position: relative;
+}
+
+.action-button-post {
+  position: absolute;
+  right: 120px;
+  width: 100px;
+}
+
+.action-button-cancel {
+  position: absolute;
+  right: 0;
+  width: 100px
+}
+
+.close-button {
+  position: absolute;
+  color: #aaaaaa;
+  top: 0px;
+  right: 7px;
+  font-size: 40px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }

@@ -34,7 +34,7 @@ const DeleteButton = ({ id, downloadUrl }) => {
           removeFile(id, downloadUrl);
         }}
       >
-        Delete
+        Xoá
       </button>
     </>
   );

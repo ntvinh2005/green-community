@@ -49,19 +49,19 @@ const Signup = () => {
   return (
     <>
         <Topbar/>
-        <div class = "container">
-        <div class = "wrapper">
-            <h1 class = "title">Đăng ký</h1>
-            <form class = "form" onSubmit={handleSubmit}>
+        <div className= "container">
+        <div className= "wrapper">
+            <h1 className= "title">Đăng ký</h1>
+            <form className= "form" onSubmit={handleSubmit}>
                 {error !== '' && <p>{error}</p>}
-                <input ref = {emailRef} placeholder="Email" class = "input" required/>
-                <input ref = {passwordRef} type = "password" placeholder="Mật khẩu" class = "input" required/>
-                <input ref = {confirmPasswordRef} type = "password" placeholder="Nhập lại mật khẩu" class = "input" required/>
-                <input ref = {nameRef} placeholder = "Tên" class = "input" required/>
-                <input ref = {phoneNumberRef} type = "tel" placeholder="SĐT" class = "input" required/>
-                <input ref = {placeLivingRef} placeholder="Địa chỉ" class = "input"/>
-                <button class = "button">Đăng ký</button>
-                <p>Bạn đã có tài khoản? <Link to = "/login" class = "link">Đăng nhập</Link> </p>
+                <input ref = {emailRef} placeholder="Email" className= "input" required/>
+                <input ref = {passwordRef} type = "password" placeholder="Mật khẩu" className= "input" required/>
+                <input ref = {confirmPasswordRef} type = "password" placeholder="Nhập lại mật khẩu" className= "input" required/>
+                <input ref = {nameRef} placeholder = "Tên" className= "input" required/>
+                <input ref = {phoneNumberRef} type = "tel" placeholder="SĐT" className= "input" required/>
+                <input ref = {placeLivingRef} placeholder="Địa chỉ" className= "input"/>
+                <button className = "button">Đăng ký</button>
+                <p>Bạn đã có tài khoản? <Link to = "/login" className= "link">Đăng nhập</Link> </p>
             </form>
         </div>
         </div>

@@ -1,30 +1,12 @@
 import "./profile.css"
-import React, { useState } from 'react';
-import { useAuth } from '../../../contexts/AuthContext';
-import { Link, useNavigate } from 'react-router-dom';
+import React from 'react';
 import { useProfile } from '../../../contexts/ProfileContext'
 import Topbar from '../../others/topbar/Topbar';
 import Footer from "../../others/footer/Footer";
 
-const PF = process.env.PUBLIC_FOLDER
-
 
 const Profile = () => {
-  const [error, setError] = useState('');
-  const { user, logout } = useAuth();
   const { profile }  = useProfile()
-
-  const navigate = useNavigate();
-
-  async function handleLogout() {
-    setError('');
-    try {
-      await logout();
-      navigate('/login');
-    } catch {
-      setError('Failed to log out');
-    }
-  }
 
   return (
     <>

@@ -3,9 +3,9 @@
   grid-template-columns: 4fr 6fr 3fr;
 }
 
-.not-login {
+/* .not-login {
   grid-template-columns: 4fr 9fr;
-}
+} */
 
 .name {
   padding: 1.5rem;

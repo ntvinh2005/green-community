@@ -2,8 +2,6 @@ import Topbar from '../../components/others/topbar/Topbar'
 import Footer from '../../components/others/footer/Footer'
 import "./home.css"
 
-const PF = process.env.PUBLIC_FOLDER
-
 export default function Home() {
 
     return (
@@ -27,14 +25,14 @@ export default function Home() {
                 </div>
                 </div>
                 <div className="center-align">
-                <img src={require('./img/about.png')} />
+                <img src={require('./img/about.png')} alt=""/>
                 </div>
             </section>
             <section className="service center-align-vertical">
                 <h3><span className="green">Dịch vụ</span> của chúng tôi</h3>
                 <div className="service-grid">
                 <div className="service-image-container sic-right">
-                    <img className="service-image" src={require('./img/list.png')} />
+                    <img className="service-image" src={require('./img/list.png')} alt=""/>
                 </div>
                 <div className="service-description sd-right">
                     <h4>Làm <span className="green">Việc Tốt</span></h4>
@@ -56,11 +54,11 @@ export default function Home() {
                     </p>
                 </div>
                 <div className="service-image-container">
-                    <img className="service-image" src= {require('./img/point.png')} />
+                    <img className="service-image" src= {require('./img/point.png')} alt=""/>
                 </div>
 
                 <div className="service-image-container sic-right">
-                    <img className="service-image" src= {require('./img/store.png')} />
+                    <img className="service-image" src= {require('./img/store.png')} alt=""/>
                 </div>
                 <div className="service-description sd-right">
                     <h4><span className="green">Trao Đổi</span> Đồ</h4>
@@ -82,7 +80,7 @@ export default function Home() {
                     </p>
                 </div>
                 <div className="service-image-container">
-                    <img className="service-image" src = {require('./img/forest.png')} />
+                    <img className="service-image" src = {require('./img/forest.png')} alt="" />
                 </div>
                 </div>
             </section>
