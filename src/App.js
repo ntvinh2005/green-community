@@ -36,7 +36,7 @@ function App() {
             <Route exact path="/market" element={<PrivateRoute><Market></Market></PrivateRoute>}></Route>
             <Route exact path="/" element={<Home/>}></Route>
             {/* <Route path="/shop" element = {<Shop />}></Route> */}
-            <Route path="/task" element = {<Task />}></Route>
+            <Route path="/task" element = {<PrivateRoute><Task /></PrivateRoute>}></Route>
           </Routes>
         </AuthProvider>
       </BrowserRouter>
