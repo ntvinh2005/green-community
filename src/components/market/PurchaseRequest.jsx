@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { database } from "../../firebase";
 import { useAuth } from "../../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
-import DatePicker from "react-datepicker";
 import './PurchaseRequest.css';
 
 const PurchaseRequest = ({ item, owner }) => {
