@@ -15,7 +15,7 @@ const Shop = () => {
 
     quests.forEach(quest => {
         quest.receivers.forEach(receiver => {
-            if (receiver.uid === user.uid) missions.push(quest)
+            if (receiver.profile.uid === user.uid) missions.push(quest)
         })
     });
 
