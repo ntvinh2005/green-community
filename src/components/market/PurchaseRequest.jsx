@@ -51,7 +51,7 @@ const PurchaseRequest = ({ item, owner }) => {
 
       <div id="myModal" className="purchase-modal" style = {{display: open ? "block" : "none"}} >
         <div className="new-purchase">
-          <span class="close-button" onClick={closeModal}>&times;</span>
+          <span className="close-button" onClick={closeModal}>&times;</span>
           <form className = "form-modal">
             <label className = "form-label">Tên mặt hàng: 
               <input className = "form-input form-input-inline" placeholder={item.title} type="text" disabled></input>

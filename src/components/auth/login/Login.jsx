@@ -35,7 +35,7 @@ const Login = () => {
               <form className = "form" onSubmit={handleSubmit}>
                 <input ref = {emailRef} placeholder="Nhập tên đăng nhập" className = "input" required/>
                 <input type = "password" ref = {passwordRef} placeholder="Mật khẩu" className = "input" required/>
-                <button className = "button">Đăng nhập</button>
+                <button>Đăng nhập</button>
                 <p>Bạn chưa có tài khoản? <Link to = "/signup" className = "link">Tạo tài khoản mới</Link> </p>
               </form>
           </div>

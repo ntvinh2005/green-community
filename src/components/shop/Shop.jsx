@@ -50,7 +50,7 @@ const Shop = () => {
         
       <div id="myModal" className="modal" style={{display: open ? "block" : "none"}}>
         <div className="new-mission">
-          <span class="close-button" onClick={hideForm}>&times;</span>
+          <span className="close-button" onClick={hideForm}>&times;</span>
           <form className = "form-mission">
             <label className = "form-label">Tên sản phẩm: 
               <input className = "form-input form-input-inline" type="text" value={title} onChange={ (event) => setTitle(event.target.value)} required></input>
@@ -74,7 +74,7 @@ const Shop = () => {
       <h2>Sản phẩm đã đăng</h2>
       <section className = "product-container">
               {shop_items.map((item) => (
-              <div key={item.id} class = "product-card">
+              <div key={item.id} className = "product-card">
                 <Item item={item}></Item>
               </div>
               ))}

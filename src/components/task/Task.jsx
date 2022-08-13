@@ -55,7 +55,7 @@ const Shop = () => {
       
       <div id="myModal" className="modal" style={{display: open ? "block" : "none"}}>
         <div className="new-mission">
-          <span class="close-button"  onClick={hideForm}>&times;</span>
+          <span className="close-button"  onClick={hideForm}>&times;</span>
           <form className = "form-modal">
             <label className = "form-label">Nhiệm vụ: </label>
             <textarea className = "form-input" type="text" value={title} onChange={ (event) => setTitle(event.target.value)} required></textarea>
