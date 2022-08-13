@@ -5,6 +5,7 @@ import { useTask } from "../../contexts/TaskContext"
 import Topbar from '../others/topbar/Topbar'
 import Quest from "./Quest"
 import "./task.css"
+import Footer from "../others/footer/Footer"
 
 const Shop = () => {
     const { user } = useAuth()
@@ -66,7 +67,7 @@ const Shop = () => {
       <main className = "mainTask">
         <h2>Nhiệm vụ</h2>
         {quests.map((quest) => (
-            <div key={quest.id} style={{ maxWidth: "400px" }} className = "mission-container">
+            <div key={quest.id} className = "mission-container">
               <Quest quest={quest}></Quest>
             </div>
         ))}
@@ -78,12 +79,14 @@ const Shop = () => {
         {missions.map((mission) => (
             <div
             key={mission.id}
-            style={{ maxWidth: "400px" }}
+            className = "mission-container"
           >
             <Quest quest={mission}></Quest>
           </div>
         ))}
       </main>
+
+      <Footer/>
     </>
   )
 }

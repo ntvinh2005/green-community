@@ -26,9 +26,9 @@ const AcceptQuest = ({quest, user}) => {
   return (
     <>
     {IsYourQuest ? (
-       <button onClick = { (e) => { e.preventDefault();}} className = "mission-button">Đã nhận nhiệm vụ</button> 
+       <button onClick = { (e) => { e.preventDefault();}} className = "mission-button">Đã nhận</button> 
     ):(
-       <button onClick = {accept} className = "mission-button">Nhận nhiệm vụ</button> 
+       <button onClick = {accept} className = "mission-button">Nhận</button> 
     )}
     </>
   )
