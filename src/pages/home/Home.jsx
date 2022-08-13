@@ -10,17 +10,14 @@ export default function Home() {
 
             <section className="introduction">
                 <h1>Green Community</h1>
-                <p>Mời chúa tể Vinh tự điền vào đây.</p>
+                <p>For a greener community</p>
             </section>
             <section className="about-us">
                 <div className="center-align-vertical">
                 <div>
                     <h3>Về <span className="green">Chúng Tôi</span></h3>
                     <p className="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nam
-                    ex voluptate optio sunt mollitia corrupti fugiat? Molestiae iusto
-                    temporibus, eveniet dolores quis perferendis exercitationem amet
-                    in similique harum impedit.
+                    Chúng tôi - Các bạn trẻ đến từ lớp 12A1 Toán Trường THPT Chuyên KHTN với chung niềm đam mê về công nghệ và khát khao về một tương lai xanh.
                     </p>
                 </div>
                 </div>
@@ -37,20 +34,14 @@ export default function Home() {
                 <div className="service-description sd-right">
                     <h4>Làm <span className="green">Việc Tốt</span></h4>
                     <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-                    expedita molestiae eos sunt eligendi ipsum cum sed alias veniam
-                    similique labore architecto? Maiores cupiditate autem libero
-                    excepturi quasi culpa quaerat!
+                    Các bạn có thể đăng những việc ảnh hưởng xấu đến môi trường, đồng thời góp sức cùng nhau hoàn thành để kiếm thêm tích điểm.
                     </p>
                 </div>
 
                 <div className="service-description sd-left">
                     <h4>Kiém Thêm <span className="green">Điểm</span></h4>
                     <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-                    expedita molestiae eos sunt eligendi ipsum cum sed alias veniam
-                    similique labore architecto? Maiores cupiditate autem libero
-                    excepturi quasi culpa quaerat!
+                    Hãy tích lũy điểm thưởng bằng cách làm nhiều việc tốt và đăng bán những món đồ cũ. Điểm càng nhiều, giá trị bạn mang lại cho cộng đồng càng lớn. Ngoài ra, điểm cũng là cơ sở giúp bạn mua những món hàng yêu thích.
                     </p>
                 </div>
                 <div className="service-image-container">
@@ -63,20 +54,14 @@ export default function Home() {
                 <div className="service-description sd-right">
                     <h4><span className="green">Trao Đổi</span> Đồ</h4>
                     <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-                    expedita molestiae eos sunt eligendi ipsum cum sed alias veniam
-                    similique labore architecto? Maiores cupiditate autem libero
-                    excepturi quasi culpa quaerat!
+                    Các bạn có thể đăng hàng bán hoặc quyên tặng cho những người có tích điểm trong cộng đồng - những người đã tham gia bảo vệ môi trường. Các bạn cũng có thể mua đồ cũ bằng tiền hoặc tích điểm bảo vệ môi trường. 
                     </p>
                 </div>
 
                 <div className="service-description sd-left">
                     <h4>Bảo Vệ <span className="green">Môi Trường</span></h4>
                     <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-                    expedita molestiae eos sunt eligendi ipsum cum sed alias veniam
-                    similique labore architecto? Maiores cupiditate autem libero
-                    excepturi quasi culpa quaerat!
+                    Thông qua việc hoàn thành các nhiệm vụ bảo vệ môi trường nhận tích điểm hay trao đổi đồ cũ, các bạn đã làm xã hội trở nên tốt đẹp hơn, văn minh hơn, môi trường sống trong lành hơn.
                     </p>
                 </div>
                 <div className="service-image-container">

@@ -8,9 +8,7 @@ export default function Footer() {
                 <div>
                     <h3><span className="green">Nghĩa vụ</span> của chúng tôi</h3>
                     <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-                    assumenda unde harum nisi, magni porro est. In suscipit ullam nulla id
-                    sapiente velit ex, facere atque minus ab delectus iusto.
+                    Chúng tôi thông qua website này có một sứ mệnh là nâng cao nhận thức của người dân cũng như thúc đẩy các hoạt động vì môi trường một cách hiệu quả và bền vững. 
                     </p>
                 </div>
                 <div>
