@@ -4,6 +4,8 @@ import { database } from "../../firebase"
 import { useTask } from "../../contexts/TaskContext"
 import Topbar from '../others/topbar/Topbar'
 import Quest from "./Quest"
+import "./task.css"
+import Footer from "../others/footer/Footer"
 
 const Shop = () => {
     const { user } = useAuth()
@@ -13,7 +15,7 @@ const Shop = () => {
 
     quests.forEach(quest => {
         quest.receivers.forEach(receiver => {
-            if (receiver.profile.uid === user.uid) missions.push(quest)
+            if (receiver.uid === user.uid) missions.push(quest)
         })
     });
 
@@ -44,43 +46,47 @@ const Shop = () => {
 
   return (
     <>
-    <Topbar/>
-    <h1>WELCOME TO QUEST BOARD</h1>
-    
-    { open ? 
-    (<div>
-        <div>
-            <label>Name of quest: </label>
-            <input type="text" value={title} onChange={(event) => setTitle(event.target.value)} required></input>
-        </div>
-        <div>
-            <label>Description of quest: </label>
-            <textarea value={description} onChange={(event) => setDescription(event.target.value)} required></textarea>
-        </div>
-        <button onClick={handleSubmit}>Submit</button>
-        <button onClick={hideForm}>Cancel</button>
-    </div>) : (<button onClick = {openForm}> + </button>)
-    }
-    <hr></hr>
-    <h1>AVAILABLE QUESTs</h1>
-    {quests.map((quest) => (
-        <div
-        key={quest.id}
-        style={{ maxWidth: "400px" }}
-      >
-        <Quest quest={quest}></Quest>
-      </div>
-    ))}
-    <hr/>
-    <h1>YOUR MISSION</h1>
-    {missions.map((mission) => (
-        <div
-        key={mission.id}
-        style={{ maxWidth: "400px" }}
-      >
-        <Quest quest={mission}></Quest>
-      </div>
-    ))}
+      <Topbar/>
+      <h1>WELCOME TO QUEST BOARD</h1>
+      
+      { open ? 
+      (<div>
+          <div>
+              <label>Name of quest: </label>
+              <input type="text" value={title} onChange={(event) => setTitle(event.target.value)} required></input>
+          </div>
+          <div>
+              <label>Description of quest: </label>
+              <textarea value={description} onChange={(event) => setDescription(event.target.value)} required></textarea>
+          </div>
+          <button onClick={handleSubmit}>Submit</button>
+          <button onClick={hideForm}>Cancel</button>
+      </div>) : (<button onClick = {openForm}> + </button>)
+      }
+      <hr></hr>
+      <main className = "mainTask">
+        <h2>Nhiệm vụ</h2>
+        {quests.map((quest) => (
+            <div key={quest.id} className = "mission-container">
+              <Quest quest={quest}></Quest>
+            </div>
+        ))}
+        
+      </main>
+      <hr></hr>
+      <main className = "mainTask">
+        <h2>Nhiệm vụ của bạn</h2>
+        {missions.map((mission) => (
+            <div
+            key={mission.id}
+            className = "mission-container"
+          >
+            <Quest quest={mission}></Quest>
+          </div>
+        ))}
+      </main>
+
+      <Footer/>
     </>
   )
 }

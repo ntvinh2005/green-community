@@ -35,7 +35,7 @@ const Signup = () => {
             phone: phoneNumberRef.current.value, 
             place: placeLivingRef.current.value, 
             username: nameRef.current.value,
-            point: 5
+            point: 0
           });
         }
       });
@@ -54,12 +54,12 @@ const Signup = () => {
             <h1 class = "title">Đăng ký</h1>
             <form class = "form" onSubmit={handleSubmit}>
                 {error !== '' && <p>{error}</p>}
-                <input ref = {nameRef} placeholder = "Tên đăng nhập" class = "input" required/>
                 <input ref = {emailRef} placeholder="Email" class = "input" required/>
                 <input ref = {passwordRef} type = "password" placeholder="Mật khẩu" class = "input" required/>
                 <input ref = {confirmPasswordRef} type = "password" placeholder="Nhập lại mật khẩu" class = "input" required/>
+                <input ref = {nameRef} placeholder = "Tên" class = "input" required/>
                 <input ref = {phoneNumberRef} type = "tel" placeholder="SĐT" class = "input" required/>
-                <input ref = {placeLivingRef} type = "tel" placeholder="Địa chỉ" class = "input"/>
+                <input ref = {placeLivingRef} placeholder="Địa chỉ" class = "input"/>
                 <button class = "button">Đăng ký</button>
                 <p>Bạn đã có tài khoản? <Link to = "/login" class = "link">Đăng nhập</Link> </p>
             </form>

@@ -1,0 +1,49 @@
+main {
+  display: flex;
+}
+
+.profile-short {
+  width: fit-content;
+  height: fit-content;
+  padding: 3rem 3rem 10rem;
+  background-color: var(--green);
+}
+
+.profile-image {
+  width: 15rem;
+  height: 15rem;
+  margin-bottom: 3rem;
+  border-radius: 3rem;
+  background: center / cover no-repeat;
+}
+
+.profile-name {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--white);
+}
+
+.profile-detail {
+  font-size: 1.2rem;
+  color: var(--white);
+}
+
+.profile-detail > span {
+  font-weight: 700;
+}
+
+.profile-modification {
+  width: 100%;
+}
+
+.profile-modification > h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.change-profile-button {
+  margin-bottom: 5rem;
+}

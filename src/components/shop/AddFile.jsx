@@ -1,6 +1,7 @@
 import React from "react";
 import { useAuth } from "../../contexts/AuthContext";
 import { database, storage } from "../../firebase";
+import "../../components/market/market.css"
 
 const AddFile = ({ item, type }) => {
   const { user } = useAuth();
@@ -43,7 +44,8 @@ const AddFile = ({ item, type }) => {
           />
         </label>
       ) : (
-        <img src={item.url} alt=""></img>
+        <img src={item.url} alt="" className='product-image'></img>
+        // <img src={item.url} alt="" className={type === "item" ? 'product-image' : 'mission-image'}></img>
       )}
     </div>
   );

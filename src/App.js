@@ -4,7 +4,7 @@ import Signup from './components/auth/signup/SignUp'
 import { AuthProvider } from './contexts/AuthContext';
 import PrivateRoute from "./components/auth/PrivateRoute";
 import CurrentUser from './components/auth/CurrentUser';
-import Profile from "./components/auth/Profile"
+import Profile from "./components/auth/profile/Profile"
 import Shop from "./components/shop/Shop";
 import Market from "./components/market/Market"
 import Home from './pages/home/Home';
@@ -35,7 +35,7 @@ function App() {
             <Route exact path="/shop" element={<PrivateRoute><Shop></Shop></PrivateRoute>}></Route>
             <Route exact path="/market" element={<PrivateRoute><Market></Market></PrivateRoute>}></Route>
             <Route exact path="/" element={<Home/>}></Route>
-            <Route path="/shop" element = {<Shop />}></Route>
+            {/* <Route path="/shop" element = {<Shop />}></Route> */}
             <Route path="/task" element = {<Task />}></Route>
           </Routes>
         </AuthProvider>

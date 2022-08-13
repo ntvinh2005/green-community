@@ -67,7 +67,7 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: var(--lightgreen) url('/public/img/forest.jpg') no-repeat center;
+    background: var(--lightgreen) url('/public/assets/img/forest.jpg') no-repeat center;
     background-blend-mode: multiply;
   }
   
