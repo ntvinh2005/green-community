@@ -60,6 +60,10 @@ const Shop = () => {
               <input className = "form-input form-input-inline" value={price} onChange={ (event) => setPrice(event.target.value)} required></input>
             </label>
 
+            <label className = "form-label">
+                <input className = "form-input form-input-inline" type="checkbox" onChange={(event) => setIsGift(event.target.checked)}></input>Is this a gift for members having high green point?
+            </label>
+
             <label className = "form-label">Mô tả: </label>
             <textarea className = "form-input form-input-description" value={description} onChange={ (event) => setDescription(event.target.value)} required></textarea>
 
