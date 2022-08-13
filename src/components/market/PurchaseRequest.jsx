@@ -3,6 +3,7 @@ import { database } from "../../firebase";
 import { useAuth } from "../../contexts/AuthContext";
 import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
+import './PurchaseRequest.css';
 
 const PurchaseRequest = ({ item, owner }) => {
   const [open, setOpen] = useState(false);
@@ -47,7 +48,38 @@ const PurchaseRequest = ({ item, owner }) => {
       <button onClick={openModal}>
         Buy
       </button>
-      {open ? (
+
+      <div id="myModal" className="purchase-modal" style = {{display: open ? "block" : "none"}} >
+        <div className="new-purchase">
+          <span class="close-button" onClick={closeModal}>&times;</span>
+          <form className = "form-modal">
+            <label className = "form-label">Tên mặt hàng: 
+              <input className = "form-input form-input-inline" placeholder={item.title} type="text" disabled></input>
+            </label>
+            <label className = "form-label">Người bán: 
+              <input className = "form-input form-input-inline" placeholder={item.authorName} type="text" disabled></input>
+            </label>
+            <label className = "form-label">Địa chỉ: 
+              <input className = "form-input form-input-inline"  type="text" value={place} onChange={(event) => setPlace(event.target.value)}></input>
+            </label>
+
+            <label className = "form-label">SĐT: 
+              <input className = "form-input form-input-inline" type="text"></input>
+            </label>
+
+            <label className = "form-label">Thời gian: 
+              <input className = "form-input form-input-inline" type="date" value={date} onChange={(event) => setDate(event.target.value)}></input>
+            </label>
+          </form>
+          <div className="action">
+            <button className = "action-button-post" onClick={handleSubmit}>Mua</button>
+            <button className = "action-button-cancel"  onClick={closeModal}>Huỷ</button>
+          </div>
+        </div>
+      </div>
+
+
+      {/* {open ? (
         <div
         style={{maxHeight: "100vh", zIndex: "9999"}}
       >
@@ -98,7 +130,7 @@ const PurchaseRequest = ({ item, owner }) => {
       </div>
       ) : (
         null
-        )}
+        )} */}
     </>
   );
 };

@@ -13,7 +13,7 @@ export function usePurchase() {
 
   useEffect(() => {
     return database.purchase
-      .where("seller", "==", user.uid)
+      .where("customerId", "==", user.uid)
       .onSnapshot((snapshot) => {
         dispatch({
           type: "SET_REQUESTS",

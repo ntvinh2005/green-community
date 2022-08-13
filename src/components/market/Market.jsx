@@ -3,6 +3,7 @@ import { useMall } from '../../contexts/MallContext'
 import Item from '../shop/Item'
 import Topbar from '../others/topbar/Topbar'
 import "./market.css"
+import Footer from '../others/footer/Footer'
 
 const Market = () => {
   const { shop_items } = useMall()
@@ -91,14 +92,16 @@ const Market = () => {
               </label>
             </div>
           </section>
-          <section class = "product-container">
+          <section className = "product-container">
             {shop_items.map((item) => (
-            <div key={item.id} class = "product-card">
+            <div key={item.id} className = "product-card">
               <Item item={item}></Item>
             </div>
             ))}
           </section>
         </main>
+
+        <Footer/>
     </>
   )
 }
