@@ -1,3 +1,41 @@
 main {
   display: flex;
 }
+
+.description-picture {
+  width: 35rem;
+  height: 35rem;
+  background: center / cover no-repeat;
+}
+
+.description-container {
+  width: 60%;
+  padding: 1rem 3rem;
+}
+
+.description-name {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.description-price {
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--grey);
+  font-size: 1.1rem;
+}
+
+.description-price > span {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.description-detail {
+  margin: 0.75rem 0;
+  font-size: 1.2rem;
+}
+
+.description-buy {
+  margin: 1.25rem 2rem 1.25rem 0;
+}

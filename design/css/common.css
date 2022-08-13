@@ -9,6 +9,7 @@
   --green: #03a71d;
   --black: #1b1b1b;
   --white: white;
+  --grey: #ededed;
 }
 
 html {
@@ -86,4 +87,10 @@ form {
   border-radius: 1.5rem;
   font-size: 1.3rem;
   font-weight: 400;
+}
+
+.outline-button {
+  border: 2px solid var(--green);
+  background-color: var(--white);
+  color: var(--green);
 }
