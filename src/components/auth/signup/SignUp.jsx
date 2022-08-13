@@ -35,7 +35,7 @@ const Signup = () => {
             phone: phoneNumberRef.current.value, 
             place: placeLivingRef.current.value, 
             username: nameRef.current.value,
-            point: 5
+            point: 0
           });
         }
       });

@@ -3,7 +3,6 @@ import { useAuth } from "../../contexts/AuthContext";
 import { database } from "../../firebase"
 import { useShop } from "../../contexts/ShopContext"
 import { usePurchase } from "../../contexts/PurchaseContext"
-import { useProfile } from '../../contexts/ProfileContext';
 import Item from "./Item"
 import AcceptButton from "./AcceptButton"
 import RejectButton from "./RejectButton"
@@ -13,7 +12,6 @@ const Shop = () => {
     const { user } = useAuth()
     const { shop_items } = useShop()
     const { requests } = usePurchase()
-    const {profile} = useProfile()
 
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
@@ -27,12 +25,7 @@ const Shop = () => {
             author: user.uid,
             isGift: isGift
          })
-         if (isGift) {
-            const current_score = profile.point
-            await database.profile.doc(profile.id).update({
-                point: current_score + 2
-            })
-         } 
+         console.log(title, description)
          setOpen(false)
     }
 
