@@ -171,6 +171,7 @@ h2 {
 }
 
 .product-image {
+  width: 10rem;
   height: 10rem;
   background: center / cover no-repeat;
 }

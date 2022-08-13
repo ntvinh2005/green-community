@@ -115,9 +115,9 @@ form {
   }
   
   .mission-image {
-    width: 100%;
+    width: 10rem;
     /* min-height: 10rem; */
-    height: auto;
+    /* height: auto; */
     background: center / cover no-repeat;
   }
   
