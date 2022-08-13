@@ -110,25 +110,30 @@ form {
   }
   
   .mission-container {
-    display: flex;
-    padding: 2rem 2rem;
+    /* display: flex; */
+    width: 90%;
+    padding: 2rem 0rem;
   }
   
   .mission-image {
-    width: 10rem;
+    /* width: 20rem; */
+    
     /* min-height: 10rem; */
     /* height: auto; */
+    flex : 1;
     background: center / cover no-repeat;
   }
   
   .mission-description-container {
     margin-left: 2rem;
+    flex: 1.5
   }
   
   .mission-title {
     margin: 0 0 0.8rem;
     font-size: 2rem;
     font-weight: 600;
+    height: 60%;
   }
   
   .mission-description {
@@ -146,4 +151,15 @@ form {
   .mission-text {
     font-size: 1.25rem;
   }
+
+.mission-button {
+  display: block;
+  margin-top: 20px;
+}
+
+.mission-wrapper {
+  width: 100%;
+  display: flex;
+  height: 80%;
+}
   

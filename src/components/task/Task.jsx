@@ -45,42 +45,45 @@ const Shop = () => {
 
   return (
     <>
-    <Topbar/>
-    <h1>WELCOME TO QUEST BOARD</h1>
-    
-    { open ? 
-    (<div>
-        <div>
-            <label>Name of quest: </label>
-            <input type="text" value={title} onChange={(event) => setTitle(event.target.value)} required></input>
-        </div>
-        <div>
-            <label>Description of quest: </label>
-            <textarea value={description} onChange={(event) => setDescription(event.target.value)} required></textarea>
-        </div>
-        <button onClick={handleSubmit}>Submit</button>
-        <button onClick={hideForm}>Cancel</button>
-    </div>) : (<button onClick = {openForm}> + </button>)
-    }
-    <hr></hr>
-    <main className = "mainTask">
-      <h2>Nhiệm vụ</h2>
-      {quests.map((quest) => (
-          <div key={quest.id} style={{ maxWidth: "400px" }} className = "mission-container">
-            <Quest quest={quest}></Quest>
-          </div>
-      ))}
+      <Topbar/>
+      <h1>WELCOME TO QUEST BOARD</h1>
       
-      <h1>YOUR MISSION</h1>
-      {missions.map((mission) => (
-          <div
-          key={mission.id}
-          style={{ maxWidth: "400px" }}
-        >
-          <Quest quest={mission}></Quest>
-        </div>
-      ))}
-    </main>
+      { open ? 
+      (<div>
+          <div>
+              <label>Name of quest: </label>
+              <input type="text" value={title} onChange={(event) => setTitle(event.target.value)} required></input>
+          </div>
+          <div>
+              <label>Description of quest: </label>
+              <textarea value={description} onChange={(event) => setDescription(event.target.value)} required></textarea>
+          </div>
+          <button onClick={handleSubmit}>Submit</button>
+          <button onClick={hideForm}>Cancel</button>
+      </div>) : (<button onClick = {openForm}> + </button>)
+      }
+      <hr></hr>
+      <main className = "mainTask">
+        <h2>Nhiệm vụ</h2>
+        {quests.map((quest) => (
+            <div key={quest.id} style={{ maxWidth: "400px" }} className = "mission-container">
+              <Quest quest={quest}></Quest>
+            </div>
+        ))}
+        
+      </main>
+      <hr></hr>
+      <main className = "mainTask">
+        <h2>Nhiệm vụ của bạn</h2>
+        {missions.map((mission) => (
+            <div
+            key={mission.id}
+            style={{ maxWidth: "400px" }}
+          >
+            <Quest quest={mission}></Quest>
+          </div>
+        ))}
+      </main>
     </>
   )
 }

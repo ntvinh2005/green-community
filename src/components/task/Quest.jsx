@@ -12,18 +12,20 @@ const Quest = ({quest}) => {
     console.log(quest)
   return (
     <>
-      <div className="mission-image" style={{backgroundImage: `url(${quest.url})`}}>
-        {/* <AddFile item = {quest} type = {"quest"}/> */}
-      </div>
-      <div className="mission-description-container">
-        <p className="mission-title">{quest.title }</p>
-        <div className="mission-description">
-          <img src= {require('./seller.png')} className="mission-icon" />
-          <span className="mission-text"> { quest.authorName} </span>
+      <div className="mission-wrapper">
+        <div className="mission-image" style={{backgroundImage: `url(${quest.url})`}}>
+          {/* <AddFile item = {quest} type = {"quest"}/> */}
         </div>
-        <div className="mission-description">
-          <img src= {require('./point.png')} className="mission-icon" />
-          <span className="mission-text"> {quest.point} </span>
+        <div className="mission-description-container">
+          <div className="mission-title">{quest.title }</div>
+          <div className="mission-description">
+            <img src= {require('./seller.png')} className="mission-icon" />
+            <span className="mission-text"> { quest.authorName} </span>
+          </div>
+          <div className="mission-description">
+            <img src= {require('./point.png')} className="mission-icon" />
+            <span className="mission-text"> {quest.point} </span>
+          </div>
         </div>
       </div>
       { user.uid === quest.author ? (

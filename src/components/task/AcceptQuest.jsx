@@ -1,5 +1,6 @@
 import React from 'react'
 import { database } from '../../firebase';
+import "./task.css";
 
 const AcceptQuest = ({quest, user}) => {
     var IsYourQuest = false
@@ -24,8 +25,10 @@ const AcceptQuest = ({quest, user}) => {
 
   return (
     <>
-    {IsYourQuest ? (null):(
-       <button onClick = {accept}>Accept this quest</button> 
+    {IsYourQuest ? (
+       <button onClick = { (e) => { e.preventDefault();}} className = "mission-button">Đã nhận nhiệm vụ</button> 
+    ):(
+       <button onClick = {accept} className = "mission-button">Nhận nhiệm vụ</button> 
     )}
     </>
   )
