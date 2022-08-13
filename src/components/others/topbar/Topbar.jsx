@@ -1,4 +1,4 @@
-// import "./topbar.css"
+import "./topbar.css"
 import "./common.css"
 import "./header.css"
 import "./profile.css"
@@ -43,10 +43,6 @@ export default function Topbar() {
                         <Link to = '/profile' className = "profile-link"> Thông tin cá nhân </Link>
                         <Link to = '/shop' className = "profile-link"> Cửa hàng của tôi </Link>
                         <button onClick={handleLogout} className="profile-link">Đăng xuất</button>
-                        {/* <a href="profile.html" class="profile-link">Thông tin cá nhân</a>
-                        <a href="#" class="profile-link">Cửa hàng của tôi</a>
-                        <a href="#" class="profile-link">Nhiệm vụ đang làm</a>
-                        <a href="#" class="profile-link">Đăng xuất</a> */}
                     </div>
                 </div>            
             </div>

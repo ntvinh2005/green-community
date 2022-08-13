@@ -29,13 +29,14 @@ h3 {
 }
 
 .topbar {
-display: grid;
-grid-template-columns: 4fr 6fr 3fr;
+  display: grid;
+  grid-template-columns: 4fr 6fr 3fr;
 }
 
 .not-login {
-display: grid;
-grid-template-columns: 4fr 7fr 2fr;
+  display: grid;
+  grid-template-columns: 4fr 6fr 3fr;
+  flex-direction: row;
 }
 
 .name {
@@ -144,4 +145,12 @@ font-weight: 600;
   font-size: 1.10rem;
   padding: 5px;
   color: #250b81
+}
+
+.profile-dropdown button {
+  border-radius: 0 !important;
+}
+
+.profile-link {
+  width: 100%;
 }

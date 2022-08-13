@@ -46,7 +46,7 @@ const PurchaseRequest = ({ item, owner }) => {
   return (
     <>
       <button onClick={openModal}>
-        Buy
+        Mua
       </button>
 
       <div id="myModal" className="purchase-modal" style = {{display: open ? "block" : "none"}} >
