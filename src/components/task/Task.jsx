@@ -8,7 +8,7 @@ import "./task.css"
 import Footer from "../others/footer/Footer"
 import { useProfile } from '../../contexts/ProfileContext';
 
-const Shop = () => {
+const Task = () => {
     const { user } = useAuth()
     const { quests } = useTask()
     const { profile } = useProfile();
@@ -29,7 +29,7 @@ const Shop = () => {
         await database.task.add({ 
             title: title,
             description: description,
-            url: "https://media.istockphoto.com/vectors/black-plus-sign-positive-symbol-vector-id688550958?k=20&m=688550958&s=612x612&w=0&h=wvzUqT3u3feYygOXg3GB9pYBbqIsyu_xpvfTX-6HOd0=",
+            url: "",
             author: user.uid, 
             authorName: profile.username,
             status: "Waiting",
@@ -110,4 +110,4 @@ const Shop = () => {
   )
 }
 
-export default Shop
+export default Task

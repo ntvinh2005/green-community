@@ -2,6 +2,7 @@ import React from "react";
 import { useAuth } from "../../contexts/AuthContext";
 import { database, storage } from "../../firebase";
 import "../../components/market/market.css"
+import "../task/task.css"
 
 const AddFile = ({ item, type }) => {
   const { user } = useAuth();
@@ -36,16 +37,15 @@ const AddFile = ({ item, type }) => {
     <div>
       {item.url === "" ? (
         <label>
-          +
+          <a style={{ verticalAlign: "middle", textAlign: "center" }}>Click Here to UPLOAD a Photo </a>
           <input
             type="file"
             onChange={handleUpload}
             style={{ opacity: 0, position: "absolute" }}
           />
-        </label>
+          </label>
       ) : (
         <img src={item.url} alt="" className='product-image'></img>
-        // <img src={item.url} alt="" className={type === "item" ? 'product-image' : 'mission-image'}></img>
       )}
     </div>
   );

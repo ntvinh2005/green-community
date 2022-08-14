@@ -26,6 +26,14 @@ export function AuthProvider({ children }) {
     return auth.signOut();
   }
 
+  function updateEmail(email) {
+    return user.updateEmail(email);
+  }
+
+  function updatePassword(password) {
+    return user.updatePassword(password);
+  }
+
   useEffect(() => {
     const unsubcribe = auth.onAuthStateChanged((user) => {
       if (user !== null) setUser(user);
@@ -40,6 +48,8 @@ export function AuthProvider({ children }) {
     signup,
     login,
     logout,
+    updatePassword,
+    updateEmail,
   };
 
   return (

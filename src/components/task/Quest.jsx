@@ -13,8 +13,7 @@ const Quest = ({quest}) => {
   return (
     <>
       <div className="mission-wrapper">
-        <div className="mission-image" style={{backgroundImage: `url(${quest.url})`}}>
-          {/* <AddFile item = {quest} type = {"quest"}/> */}
+        <AddFile item = {quest} type = {"quest"}/> 
         </div>
         <div className="mission-description-container">
           <div className="mission-title">{quest.title }</div>
@@ -45,7 +44,6 @@ const Quest = ({quest}) => {
             </div>
           </div>
         </div>
-      </div>
       
     </>
   )

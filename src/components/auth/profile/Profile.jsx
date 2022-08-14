@@ -1,12 +1,42 @@
 import "./profile.css"
-import React from 'react';
+import React, {useState} from 'react';
 import { useProfile } from '../../../contexts/ProfileContext'
 import Topbar from '../../others/topbar/Topbar';
 import Footer from "../../others/footer/Footer";
+import { database } from "../../../firebase";
+import { useAuth } from "../../../contexts/AuthContext";
 
 
 const Profile = () => {
   const { profile }  = useProfile()
+  const [newUsername, setNewUsername] = useState("")
+  const [newPassword, setNewPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("")
+  const [newEmail, setNewEmail] = useState("")
+  const { updatePassword, updateEmail } = useAuth()
+
+  const handleChangeUsername = async() => {
+    await database.profile.doc(profile.id).update({ 
+      username: newUsername,
+    })
+    setNewUsername("")
+  }
+
+  const handleResetPassword = async() => {
+    if (confirmPassword == newPassword) {
+      await updatePassword(newPassword)
+    }
+    setNewPassword("")
+    setConfirmPassword("")
+  }
+
+  const handleResetEmail = async() => {
+    await updateEmail(newEmail)
+    await database.profile.doc(profile.id).update({ 
+      email: newEmail,
+    })
+    setNewEmail("")
+  }
 
   return (
     <>
@@ -25,7 +55,7 @@ const Profile = () => {
         </section>
         <section className="profile-modification">
           <h3>Thay đổi thông tin cá nhân</h3>
-          <form>
+          <div className="form">
             <label className="form-label" htmlFor="username">Tên tài khoản:</label>
             <input className="form-input" id="username" value={profile.username} disabled />
             <label className="form-label" htmlFor="new-username"
@@ -36,8 +66,12 @@ const Profile = () => {
               className="form-input"
               id="new-username"
               placeholder="Tên tài khoản mới"
+              value={newUsername}
+              onChange={(event) => setNewUsername(event.target.value)}
             />
-            <button className="change-profile-button">Thay đổi tài khoản</button>
+            <button className="change-profile-button" onClick={handleChangeUsername}>Thay đổi tài khoản</button>
+
+            <label className="form-label" htmlFor="username" style={{ margin: "10px"}}>Thay đổi thông tin địa chỉ thư điện tử và mật khẩu cần đăng xuất và đăng nhập lại trước.</label>
             <label className="form-label" htmlFor="email">Địa chỉ thư điện tử:</label>
             <input
               className="form-input"
@@ -53,16 +87,21 @@ const Profile = () => {
               className="form-input"
               id="new-email"
               placeholder="Địa chỉ thư điện tử mới"
+              value={newEmail}
+              onChange={(event) => setNewEmail(event.target.value)}
             />
-            <button className="change-profile-button">
+            <button className="change-profile-button" onClick={handleResetEmail}>
               Thay đổi địa chỉ thư điện tử
             </button>
+            
             <label className="form-label" htmlFor="new-email">Mật khẩu mới:</label>
             <input
               type="password"
               className="form-input"
               id="new-email"
               placeholder="Mật khẩu mới"
+              value={newPassword}
+              onChange={(event) => setNewPassword(event.target.value)}
             />
             <label className="form-label" htmlFor="new-email"
               >Xác nhận mật khẩu mới:</label
@@ -72,11 +111,13 @@ const Profile = () => {
               className="form-input"
               id="new-email"
               placeholder="Mật khẩu mới"
+              value={confirmPassword}
+              onChange={(event) => setConfirmPassword(event.target.value)}
             />
-            <button className="change-profile-button" style={{marginBottom: 0}}>
+            <button className="change-profile-button" style={{marginBottom: 0}} onClick={handleResetPassword}>
               Thay đổi mật khẩu
             </button>
-          </form>
+          </div>
         </section>
       </main>
       <Footer/>
