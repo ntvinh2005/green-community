@@ -26,7 +26,7 @@ export default function Topbar() {
         return (
             <div className = "topbar">
                 <Link to = '/' className = "name">
-                    <span className="green">Green</span> Community
+                    <span className="green">Green</span> H
                 </Link>
                 <nav className="navbar">
                     <Link to = '/' className = "nav"> Trang chủ </Link>

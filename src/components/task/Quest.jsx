@@ -29,6 +29,9 @@ const Quest = ({quest}) => {
                 <img src= {require('./point.png')} className="mission-icon" />
                 <span className="mission-text"> {quest.point} </span>
               </div>
+              <div className="mission-description">
+                <span className="mission-text" style={{marginBottom: "50px"}}> Nơi chốn: {quest.place !== null ? (quest.place):(null) } </span>
+              </div>
             </div>
             <div className="mission-button">
               { user.uid === quest.author ? (

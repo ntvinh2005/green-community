@@ -24,6 +24,7 @@ const Task = () => {
 
     const [title, setTitle] = useState("")
     const [description, setDescription] = useState("")
+    const [place, setPlace] = useState("")
     const [open, setOpen] = useState(false)
     const handleSubmit = async () => {
         await database.task.add({ 
@@ -32,6 +33,7 @@ const Task = () => {
             url: "",
             author: user.uid, 
             authorName: profile.username,
+            place: place,
             status: "Waiting",
             receivers: [],
          })
@@ -62,6 +64,9 @@ const Task = () => {
 
             <label className = "form-label">Mô tả: </label>
             <textarea className = "form-input form-input-description" value={description} size = "50" onChange={ (event) => setDescription(event.target.value)} required></textarea>
+
+            <label className = "form-label">Nơi thực hiện: </label>
+            <textarea className = "form-input form-input-description" value={place} size = "50" onChange={ (event) => setPlace(event.target.value)} required></textarea>
           </form>
           <div className="action">
             <button className = "action-button-post" onClick={handleSubmit}>Đăng</button>

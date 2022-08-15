@@ -9,7 +9,7 @@ export default function Home() {
             <Topbar/>
 
             <section className="introduction">
-                <h1>Green Community</h1>
+                <h1>GreenH</h1>
                 <p>For a greener community</p>
             </section>
             <section className="about-us">
@@ -39,7 +39,7 @@ export default function Home() {
                 </div>
 
                 <div className="service-description sd-left">
-                    <h4>Kiém Thêm <span className="green">Điểm</span></h4>
+                    <h4>Kiếm Thêm <span className="green">Điểm</span></h4>
                     <p>
                     Hãy tích lũy điểm thưởng bằng cách làm nhiều việc tốt và đăng bán những món đồ cũ. Điểm càng nhiều, giá trị bạn mang lại cho cộng đồng càng lớn. Ngoài ra, điểm cũng là cơ sở giúp bạn mua những món hàng yêu thích.
                     </p>
